@@ -1,0 +1,16 @@
+PODS:
+  - Popover (1.2.2)
+
+DEPENDENCIES:
+  - Popover
+
+SPEC REPOS:
+  trunk:
+    - Popover
+
+SPEC CHECKSUMS:
+  Popover: 21e357f86d45c8d9e29a41a4adbca3664d6e511f
+
+PODFILE CHECKSUM: f8cff8913911f316b7411e9389d57b7fb9ae3bdc
+
+COCOAPODS: 1.8.4

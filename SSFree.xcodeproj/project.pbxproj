@@ -29,8 +29,6 @@
 		2718A85A23B5B6210002A156 /* MMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78C23A8993100569DB9 /* MMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2718A85B23B5B6210002A156 /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78523A8993000569DB9 /* NEKit.framework */; };
 		2718A85C23B5B6210002A156 /* NEKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78523A8993000569DB9 /* NEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2718A85D23B5B6210002A156 /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2704949223B450FD00B5D431 /* Popover.framework */; };
-		2718A85E23B5B6210002A156 /* Popover.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2704949223B450FD00B5D431 /* Popover.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2718A85F23B5B6210002A156 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78323A8993000569DB9 /* Resolver.framework */; };
 		2718A86023B5B6210002A156 /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78323A8993000569DB9 /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2718A86123B5B6210002A156 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78423A8993000569DB9 /* Sodium.framework */; };
@@ -87,6 +85,9 @@
 		27A8047023A8D08300DE6FED /* SSEncryptionTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8046E23A8D08300DE6FED /* SSEncryptionTypeCell.swift */; };
 		27A8047123A8D08300DE6FED /* SSEncryptionTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A8046F23A8D08300DE6FED /* SSEncryptionTypeCell.xib */; };
 		27D4AA6323B2F1C1005345F9 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275E346E235DAA4400413056 /* NetworkExtension.framework */; };
+		6C5457176908876EA9612ADB /* Pods_SSFree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588CAA97CDC7D229C0628350 /* Pods_SSFree.framework */; };
+		76547CDC18E15AE100B35804 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9E03EB7B25E6C6EF964CAE /* Pods_PacketTunnel.framework */; };
+		E9EC8A244EBDCAD2B37476B1 /* Pods_SSWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BE93FBE61D8D534DD376C7 /* Pods_SSWidget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +121,6 @@
 				2718A85023B5B6200002A156 /* CocoaLumberjack.framework in Embed Frameworks */,
 				2718A86A23B5B6210002A156 /* Yaml.framework in Embed Frameworks */,
 				2718A84E23B5B6200002A156 /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				2718A85E23B5B6210002A156 /* Popover.framework in Embed Frameworks */,
 				2718A86423B5B6210002A156 /* SwiftTimer.framework in Embed Frameworks */,
 				2718A85223B5B6200002A156 /* CocoaLumberjackSwift.framework in Embed Frameworks */,
 				2718A85C23B5B6210002A156 /* NEKit.framework in Embed Frameworks */,
@@ -203,6 +203,15 @@
 		27A8046C23A8CF7300DE6FED /* SSRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSRouteModel.swift; sourceTree = "<group>"; };
 		27A8046E23A8D08300DE6FED /* SSEncryptionTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEncryptionTypeCell.swift; sourceTree = "<group>"; };
 		27A8046F23A8D08300DE6FED /* SSEncryptionTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSEncryptionTypeCell.xib; sourceTree = "<group>"; };
+		4E0BDA627C8CC2EF135FA244 /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
+		5710D1F92CBAA355E1FB6B97 /* Pods-SSWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSWidget.debug.xcconfig"; path = "Target Support Files/Pods-SSWidget/Pods-SSWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		588CAA97CDC7D229C0628350 /* Pods_SSFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B18967859C13DD6494C7378 /* Pods-PacketTunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.debug.xcconfig"; path = "Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		BE9E03EB7B25E6C6EF964CAE /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17CEB16C8B1D52B86F4F645 /* Pods-SSFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSFree.release.xcconfig"; path = "Target Support Files/Pods-SSFree/Pods-SSFree.release.xcconfig"; sourceTree = "<group>"; };
+		C82382BD2B67175A5F18FC5A /* Pods-SSWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSWidget.release.xcconfig"; path = "Target Support Files/Pods-SSWidget/Pods-SSWidget.release.xcconfig"; sourceTree = "<group>"; };
+		D8E4C09F813D1E15CE579F34 /* Pods-SSFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSFree.debug.xcconfig"; path = "Target Support Files/Pods-SSFree/Pods-SSFree.debug.xcconfig"; sourceTree = "<group>"; };
+		F2BE93FBE61D8D534DD376C7 /* Pods_SSWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +221,7 @@
 			files = (
 				2772DA5623B2F11000F6FF8B /* NotificationCenter.framework in Frameworks */,
 				2772DA5423B2F10E00F6FF8B /* NetworkExtension.framework in Frameworks */,
+				E9EC8A244EBDCAD2B37476B1 /* Pods_SSWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +236,6 @@
 				2718A84F23B5B6200002A156 /* CocoaLumberjack.framework in Frameworks */,
 				2718A86923B5B6210002A156 /* Yaml.framework in Frameworks */,
 				2718A84D23B5B6200002A156 /* CocoaAsyncSocket.framework in Frameworks */,
-				2718A85D23B5B6210002A156 /* Popover.framework in Frameworks */,
 				2718A86323B5B6210002A156 /* SwiftTimer.framework in Frameworks */,
 				2718A85123B5B6200002A156 /* CocoaLumberjackSwift.framework in Frameworks */,
 				2718A85B23B5B6210002A156 /* NEKit.framework in Frameworks */,
@@ -234,6 +243,7 @@
 				2718A85F23B5B6210002A156 /* Resolver.framework in Frameworks */,
 				2718A86523B5B6210002A156 /* TrafficPolice.framework in Frameworks */,
 				2718A85923B5B6210002A156 /* MMDB.framework in Frameworks */,
+				6C5457176908876EA9612ADB /* Pods_SSFree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +263,26 @@
 				2750E94823B58D890079E3B4 /* MMDB.framework in Frameworks */,
 				2750E94A23B58D890079E3B4 /* NEKit.framework in Frameworks */,
 				2750E94023B58D890079E3B4 /* CocoaLumberjack.framework in Frameworks */,
+				76547CDC18E15AE100B35804 /* Pods_PacketTunnel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16911E53FFB324896B523E44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B18967859C13DD6494C7378 /* Pods-PacketTunnel.debug.xcconfig */,
+				4E0BDA627C8CC2EF135FA244 /* Pods-PacketTunnel.release.xcconfig */,
+				D8E4C09F813D1E15CE579F34 /* Pods-SSFree.debug.xcconfig */,
+				C17CEB16C8B1D52B86F4F645 /* Pods-SSFree.release.xcconfig */,
+				5710D1F92CBAA355E1FB6B97 /* Pods-SSWidget.debug.xcconfig */,
+				C82382BD2B67175A5F18FC5A /* Pods-SSWidget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2704949523B4518F00B5D431 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +332,7 @@
 				27301868235ECC9B00E00181 /* SSWidget */,
 				275E3445235DA97600413056 /* Products */,
 				275E346D235DAA4400413056 /* Frameworks */,
+				16911E53FFB324896B523E44 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -371,6 +396,9 @@
 				2711F78723A8993000569DB9 /* Yaml.framework */,
 				275E346E235DAA4400413056 /* NetworkExtension.framework */,
 				27301866235ECC9B00E00181 /* NotificationCenter.framework */,
+				BE9E03EB7B25E6C6EF964CAE /* Pods_PacketTunnel.framework */,
+				588CAA97CDC7D229C0628350 /* Pods_SSFree.framework */,
+				F2BE93FBE61D8D534DD376C7 /* Pods_SSWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -416,6 +444,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27301872235ECC9B00E00181 /* Build configuration list for PBXNativeTarget "SSWidget" */;
 			buildPhases = (
+				7AE044884203ED772284F120 /* [CP] Check Pods Manifest.lock */,
 				27301861235ECC9B00E00181 /* Sources */,
 				27301862235ECC9B00E00181 /* Frameworks */,
 				27301863235ECC9B00E00181 /* Resources */,
@@ -433,12 +462,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 275E3458235DA97900413056 /* Build configuration list for PBXNativeTarget "SSFree" */;
 			buildPhases = (
+				432DEB6F0CE91BC0460207C6 /* [CP] Check Pods Manifest.lock */,
 				275E3440235DA97600413056 /* Sources */,
 				275E3441235DA97600413056 /* Frameworks */,
 				275E3442235DA97600413056 /* Resources */,
 				275E346B235DA9EB00413056 /* Embed App Extensions */,
 				2718A86B23B5B6210002A156 /* Embed Frameworks */,
 				27A9750123B6F0930080ED48 /* ShellScript */,
+				4AB755F9A60D49AC78048DDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -455,6 +486,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 275E3468235DA9EB00413056 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
 			buildPhases = (
+				B943F99AF18A3643B7A9CAD0 /* [CP] Check Pods Manifest.lock */,
 				275E345B235DA9EB00413056 /* Sources */,
 				275E345C235DA9EB00413056 /* Frameworks */,
 				275E345D235DA9EB00413056 /* Resources */,
@@ -555,7 +587,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Popover.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjack.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
@@ -578,6 +609,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		432DEB6F0CE91BC0460207C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSFree-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AB755F9A60D49AC78048DDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSFree/Pods-SSFree-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SSFree/Pods-SSFree-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSFree/Pods-SSFree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AE044884203ED772284F120 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SSWidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B943F99AF18A3643B7A9CAD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PacketTunnel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -670,6 +784,7 @@
 /* Begin XCBuildConfiguration section */
 		27301873235ECC9B00E00181 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5710D1F92CBAA355E1FB6B97 /* Pods-SSWidget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SSWidget/SSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -698,6 +813,7 @@
 		};
 		27301874235ECC9B00E00181 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82382BD2B67175A5F18FC5A /* Pods-SSWidget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SSWidget/SSWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -842,6 +958,7 @@
 		};
 		275E3459235DA97900413056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E4C09F813D1E15CE579F34 /* Pods-SSFree.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -875,6 +992,7 @@
 		};
 		275E345A235DA97900413056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17CEB16C8B1D52B86F4F645 /* Pods-SSFree.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -906,6 +1024,7 @@
 		};
 		275E3469235DA9EB00413056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B18967859C13DD6494C7378 /* Pods-PacketTunnel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -932,6 +1051,7 @@
 		};
 		275E346A235DA9EB00413056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E0BDA627C8CC2EF135FA244 /* Pods-PacketTunnel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
