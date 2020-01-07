@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-SSFree/Pods-SSFree-frameworks.sh
+${BUILT_PRODUCTS_DIR}/EasyTip/EasyTip.framework
 ${BUILT_PRODUCTS_DIR}/Popover/Popover.framework

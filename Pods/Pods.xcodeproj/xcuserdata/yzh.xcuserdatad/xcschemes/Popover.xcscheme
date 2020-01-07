@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "89ADB0D61D0BE9648E9853F5F8BDA717"
-               BuildableName = "Popover.framework"
+               BuildableName = "libPopover.a"
                BlueprintName = "Popover"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

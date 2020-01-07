@@ -1,0 +1,1 @@
+../../../Target Support Files/EasyTip/EasyTip-umbrella.h

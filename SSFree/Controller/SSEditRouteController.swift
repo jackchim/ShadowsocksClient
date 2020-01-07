@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import EasyTip
 
 /// 编辑线路
 class SSEditRouteController: UIViewController {
+    
+    private lazy var defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
     
     /// 线路
     private var route: SSRouteModel!
@@ -130,14 +133,17 @@ class SSEditRouteController: UIViewController {
             let password = passwordTF.text,
             let encryption = encryptionType
             else {
+                EasyTip.showStatusInfo(in: view, message: "信息不完整", complete: nil)
                 return
         }
+        
         let route = SSRouteModel(ip_address: ip_address, port: port, password: password, encryptionType: encryption.name!)
         route.isSelected = true
         
         guard let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first,
             let data = try? JSONEncoder().encode(route)
             else {
+                EasyTip.error(in: view, message: "保存失败", complete: nil)
                 return
         }
         let routeFilePath = "\(doc)/Routes.data"
@@ -149,7 +155,16 @@ class SSEditRouteController: UIViewController {
         array.replaceObject(at: index, with: data)
         if array.write(toFile: routeFilePath, atomically: true) {
             completed?(route)
-            navigationController?.popViewController(animated: true)
+            EasyTip.success(in: view, message: "保存成功") {
+                self.navigationController?.popViewController(animated: true)
+            }
+        } else {
+            EasyTip.error(in: view, message: "保存失败", complete: nil)
+        }
+        
+        if self.route.isSelected ?? false {
+            // 保存为默认路线
+            defaultStand.set(data, forKey: "DefaultRoute")
         }
     }
     
@@ -160,10 +175,7 @@ class SSEditRouteController: UIViewController {
             let password = passwordTF.text,
             let encryption = encryptionType
             else {
-                let alertVC = UIAlertController(title: nil, message: "信息不完整", preferredStyle: .alert)
-                let action = UIAlertAction(title: "好", style: .default, handler: nil)
-                alertVC.addAction(action)
-                present(alertVC, animated: true, completion: nil)
+                EasyTip.showStatusInfo(in: view, message: "信息不完整", complete: nil)
                 return
         }
         

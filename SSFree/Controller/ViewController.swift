@@ -10,10 +10,11 @@ import UIKit
 import NetworkExtension
 import Lottie
 import Popover
+import EasyTip
 
 class ViewController: UIViewController {
     
-    let defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")
+    private lazy var defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
     
     var status: SSVPNStatus {
         didSet {
@@ -119,7 +120,7 @@ class ViewController: UIViewController {
     
     /// 加载默认路线
     private func loadDefaultRoute() {
-        guard let data = defaultStand?.value(forKey: "DefaultRoute") as? Data,
+        guard let data = defaultStand.value(forKey: "DefaultRoute") as? Data,
             let route = try? JSONDecoder().decode(SSRouteModel.self, from: data)
             else {
                 return
@@ -204,10 +205,7 @@ extension ViewController {
                 startAnimation()
                 switchImageView.isUserInteractionEnabled = false
             } else {
-                let alertVC = UIAlertController(title: nil, message: "请选择路线", preferredStyle: .alert)
-                let action = UIAlertAction(title: "好", style: .default, handler: nil)
-                alertVC.addAction(action)
-                present(alertVC, animated: true, completion: nil)
+                EasyTip.showStatusInfo(in: view, message: "请选择路线", complete: nil)
             }
         case .on:
             SSVPNManager.shared.disconnect()
@@ -236,6 +234,7 @@ extension ViewController {
     
     /// 选择路线
     @IBAction private func chooseRoute() {
+        currentRoute?.isSelected = true
         let vc = SSRouteListController.routeList(currentRoute: currentRoute) { route in
             self.currentRoute = route
             self.routeInfoLabel.text = "\(route.ip_address):\(route.port)"

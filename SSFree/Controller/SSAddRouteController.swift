@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import EasyTip
 
 class SSAddRouteController: UIViewController {
     
-    private let defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
+    private lazy var defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
     
     private lazy var navBar = UINavigationBar(frame: CGRect())
     private lazy var navItem = UINavigationItem(title: "添加线路")
@@ -110,28 +111,32 @@ class SSAddRouteController: UIViewController {
             let password = passwordTF.text,
             let encryption = encryptionType
             else {
-                let alertVC = UIAlertController(title: nil, message: "信息不完整", preferredStyle: .alert)
-                let action = UIAlertAction(title: "好", style: .default, handler: nil)
-                alertVC.addAction(action)
-                present(alertVC, animated: true, completion: nil)
+                EasyTip.showStatusInfo(in: view, message: "信息不完整", complete: nil)
                 return
         }
+        
         let route = SSRouteModel(ip_address: ip_address, port: port, password: password, encryptionType: encryption.name!)
         
         let manager = FileManager.default
         guard let doc = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first,
             let data = try? JSONEncoder().encode(route)
             else {
+                EasyTip.error(in: view, message: "保存失败", complete: nil)
                 return
         }
         let routeFilePath = "\(doc)/Routes.data"
         if manager.fileExists(atPath: routeFilePath) {
             guard let array = NSMutableArray(contentsOfFile: routeFilePath) else {
+                EasyTip.error(in: view, message: "保存失败", complete: nil)
                 return
             }
             array.add(data)
             if array.write(toFile: routeFilePath, atomically: true) {
-                navigationController?.popViewController(animated: true)
+                EasyTip.success(in: view, message: "保存成功") {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                EasyTip.error(in: view, message: "保存失败", complete: nil)
             }
         } else {
             if manager.createFile(atPath: routeFilePath, contents: nil, attributes: nil),
@@ -139,6 +144,9 @@ class SSAddRouteController: UIViewController {
                 navigationController?.popViewController(animated: true)
                 // 保存为默认路线
                 defaultStand.set(data, forKey: "DefaultRoute")
+                EasyTip.success(in: view, message: "保存成功", complete: nil)
+            } else {
+                EasyTip.error(in: view, message: "保存失败", complete: nil)
             }
         }
     }

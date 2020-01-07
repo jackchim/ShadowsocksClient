@@ -11,7 +11,7 @@ import UIKit
 /// 路线列表
 class SSRouteListController: UIViewController {
     
-    private let defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
+    private lazy var defaultStand = UserDefaults.init(suiteName: "group.com.ssfree")!
     
     private lazy var navBar = UINavigationBar(frame: CGRect())
     private lazy var navItem = UINavigationItem(title: "选择线路")

@@ -1,4 +1,4 @@
-framework module Popover {
+module Popover {
   umbrella header "Popover-umbrella.h"
 
   export *

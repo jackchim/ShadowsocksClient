@@ -1,0 +1,6 @@
+module EasyTip {
+  umbrella header "EasyTip-umbrella.h"
+
+  export *
+  module * { export * }
+}

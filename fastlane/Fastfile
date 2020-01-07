@@ -12,6 +12,5 @@ output_directory:"./build",
 
 export_xcargs:"-allowProvisioningUpdates",
 )
-pgyer(api_key: "885b692ac025cb64e2ccb04d0fcb8e64", user_key: "93fe7169892d5a8a53b65a833a82d084", update_description: "Update")
   end
 end

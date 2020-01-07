@@ -1,15 +1,10 @@
+source "https://github.com/CocoaPods/Specs.git"
+
 platform :ios, '13.0'
-use_frameworks!
-
-target 'PacketTunnel' do
-
-end
+#use_frameworks!
 
 target 'SSFree' do
   pod 'Popover'
-
-end
-
-target 'SSWidget' do
+  pod 'EasyTip'
 
 end
