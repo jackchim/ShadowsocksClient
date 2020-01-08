@@ -192,10 +192,12 @@ class SSEditRouteController: UIViewController {
             return
         }
         qrcodeImageView.image = qrcodeImage
-        qrcodeImageView.bounds.size = qrcodeSize
+        qrcodeImageView.bounds.size = CGSize(width: qrcodeImageWidth + 10, height: qrcodeImageWidth + 10)
+        qrcodeImageView.layer.borderColor = UIColor(named: "TextColor")?.cgColor
+        qrcodeImageView.layer.borderWidth = 1
         qrcodeImageView.center = CGPoint(x: view.bounds.width * 0.5, y: view.bounds.height * 0.5)
         let qrcodeImageContainer = UIView(frame: CGRect(origin: CGPoint(x: 0, y: view.bounds.height), size: view.bounds.size))
-        qrcodeImageContainer.backgroundColor = UIColor.white
+        qrcodeImageContainer.backgroundColor = UIColor(named: "SubviewBackground")
         qrcodeImageContainer.addSubview(qrcodeImageView)
         view.addSubview(qrcodeImageContainer)
         
@@ -225,16 +227,36 @@ extension SSEditRouteController {
         let data = content.data(using: .utf8)
         filter?.setValue(data, forKey: "inputMessage")
         //生成二维码
-        guard let ciImage = filter?.outputImage else {
+        guard let ciImage = filter?.outputImage,
+            let imageUI = transitionCIImageToUIImage(ciImage: ciImage, size: size)
+            else {
+                return nil
+        }
+        
+        // 设置二维码颜色
+        let imageCI = CIImage(image: imageUI)
+        let colorFilter = CIFilter(name:"CIFalseColor")
+        colorFilter?.setDefaults()
+
+        // 设置图片
+        colorFilter?.setValue(imageCI, forKeyPath: "inputImage")
+        // 设置二维码颜色
+        colorFilter?.setValue(CIColor(color: UIColor(named: "TextColor")!), forKeyPath: "inputColor0")
+        
+        // 设置背景颜色
+        colorFilter?.setValue(CIColor.init(color: UIColor.clear), forKeyPath: "inputColor1")
+        guard let colorOutPutImage = colorFilter?.outputImage else {
             return nil
         }
-        let image = transitionCIImageToUIImage(ciImage: ciImage, size: size)
-        return image
+        
+        let resultImage = UIImage(ciImage: colorOutPutImage)
+        return resultImage
     }
     
     fileprivate func transitionCIImageToUIImage(ciImage: CIImage, size: CGSize) -> UIImage? {
         //获取ciimage的bounds
         let extent = ciImage.extent
+        
         //获取缩放比例
         let scale = min(size.width / extent.width, size.height / extent.height) * UIScreen.main.scale
         //创建bitmap(位图)

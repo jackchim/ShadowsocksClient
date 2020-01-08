@@ -47,6 +47,7 @@
 		27301871235ECC9B00E00181 /* Ladder.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27301865235ECC9B00E00181 /* Ladder.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27301877235ECF0900E00181 /* SSVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E34A5235DAF3F00413056 /* SSVPNManager.swift */; };
 		27301878235ED38800E00181 /* NEKitRule.conf in Resources */ = {isa = PBXBuildFile; fileRef = 275E34A7235E891A00413056 /* NEKitRule.conf */; };
+		274D11E823C5B02300EEC319 /* SSHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274D11E723C5B02300EEC319 /* SSHeaderView.swift */; };
 		2750E93E23B58D890079E3B4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78123A8993000569DB9 /* CocoaAsyncSocket.framework */; };
 		2750E94023B58D890079E3B4 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78923A8993000569DB9 /* CocoaLumberjack.framework */; };
 		2750E94223B58D890079E3B4 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78A23A8993000569DB9 /* CocoaLumberjackSwift.framework */; };
@@ -173,6 +174,7 @@
 		2730186E235ECC9B00E00181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2738304A23B3511F003FAC10 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		2738304D23B3512E003FAC10 /* SwiftTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTimer.framework; path = Carthage/Build/iOS/SwiftTimer.framework; sourceTree = "<group>"; };
+		274D11E723C5B02300EEC319 /* SSHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHeaderView.swift; sourceTree = "<group>"; };
 		275884EF23B2050200CE6B0F /* SSEditRouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEditRouteController.swift; sourceTree = "<group>"; };
 		275D64FB235EF0BB00C21081 /* Assest.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assest.xcassets; sourceTree = "<group>"; };
 		275D64FD235EF77C00C21081 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				2704949823B4531800B5D431 /* SSPopoverView.swift */,
 				270494A023B4615500B5D431 /* SSScanQRCodeView.swift */,
 				270494A223B461CE00B5D431 /* SSScanQRCodeHelperTool.swift */,
+				274D11E723C5B02300EEC319 /* SSHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,7 +338,6 @@
 		275E3446235DA97600413056 /* SSFree */ = {
 			isa = PBXGroup;
 			children = (
-				27BDAA1823C2C006002177B6 /* Lib */,
 				270494A723B4AFAB00B5D431 /* Tool */,
 				270494A623B4AF9F00B5D431 /* Resource */,
 				2704949523B4518F00B5D431 /* View */,
@@ -420,13 +422,6 @@
 				27A8046C23A8CF7300DE6FED /* SSRouteModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		27BDAA1823C2C006002177B6 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +669,7 @@
 				27A8047023A8D08300DE6FED /* SSEncryptionTypeCell.swift in Sources */,
 				279E01B023A8C28100C7FF3C /* CustomNavigationController.swift in Sources */,
 				279E01B723A8C97E00C7FF3C /* SSEncryptionTypeModel.swift in Sources */,
+				274D11E823C5B02300EEC319 /* SSHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

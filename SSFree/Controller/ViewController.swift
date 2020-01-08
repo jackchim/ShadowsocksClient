@@ -62,6 +62,7 @@ class ViewController: UIViewController {
     }()
 
     @IBOutlet weak var topBGViewHeightCons: NSLayoutConstraint!
+    @IBOutlet weak var animView: UIView!
     /// 开关
     @IBOutlet weak var switchImageView: UIImageView!
     /// 路线信息
@@ -106,7 +107,7 @@ class ViewController: UIViewController {
         bgLayer.addSublayer(gradientLayer1)
         bgLayer.addSublayer(gradientLayer2)
         
-        switchImageView.superview!.layer.insertSublayer(bgLayer, at: 0)
+        animView.layer.insertSublayer(bgLayer, at: 0)
         
         gradientMaskLayer.lineWidth = 1
         gradientMaskLayer.lineCap = .round
@@ -116,6 +117,11 @@ class ViewController: UIViewController {
         let path = UIBezierPath(arcCenter: CGPoint(x: radius, y: radius), radius: radius - 1, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
         gradientMaskLayer.path = path.cgPath
         bgLayer.mask = gradientMaskLayer
+        
+        bgLayer.frame = CGRect(x: 0, y: 0, width: animView.bounds.width, height: animView.bounds.height)
+        gradientLayer1.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
+        gradientLayer2.frame = CGRect(origin: CGPoint(x: bgLayer.bounds.width * 0.5, y: 0), size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
+        gradientMaskLayer.frame = bgLayer.bounds
     }
     
     /// 加载默认路线
@@ -156,14 +162,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.navigationBar.isHidden = false
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        bgLayer.frame = CGRect(x: (UIScreen.main.bounds.width - 140) * 0.5, y: (UIScreen.main.bounds.width * 0.7 - 140) * 0.5, width: 140, height: 140)
-        gradientLayer1.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
-        gradientLayer2.frame = CGRect(origin: CGPoint(x: bgLayer.bounds.width * 0.5, y: 0), size: CGSize(width: bgLayer.bounds.width * 0.5, height: bgLayer.bounds.height))
-        gradientMaskLayer.frame = bgLayer.bounds
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

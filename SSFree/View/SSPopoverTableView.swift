@@ -39,6 +39,7 @@ class SSPopoverTableView: UITableView {
         tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
         register(SSPopoverViewCell.self, forCellReuseIdentifier: "SSPopoverViewCellId")
         clipsToBounds = true
+        separatorColor = UIColor(named: "Separator")
     }
 }
 
@@ -105,11 +106,13 @@ class SSPopoverViewCell: UITableViewCell {
         titleButton.titleLabel?.textAlignment = .center
         contentView.addSubview(titleButton)
         
+        contentView.backgroundColor = UIColor(named: "PopoverColor")
+        
         separatorInset.right = 13
         separatorInset.left = 13
         
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor(named: "Background")
+        backgroundView.backgroundColor = UIColor(named: "PopoverColor")
         selectedBackgroundView = backgroundView
     }
     

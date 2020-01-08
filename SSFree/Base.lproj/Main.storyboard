@@ -16,16 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-7e-PUX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-7e-PUX" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="RhE-nN-r1G"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5p-35-7vi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5p-35-7vi" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="414" height="290"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usi-8n-rO4">
+                                        <rect key="frame" x="137" y="75" width="140" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Gor-9d-7xj"/>
+                                            <constraint firstAttribute="width" constant="140" id="Yu1-cT-E1E"/>
+                                        </constraints>
+                                    </view>
                                     <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaiguan" translatesAutoresizingMaskIntoConstraints="NO" id="fs0-Fa-cRw">
                                         <rect key="frame" x="157" y="95" width="100" height="100"/>
                                         <gestureRecognizers/>
@@ -38,9 +45,10 @@
                                         </connections>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
                                     <constraint firstItem="fs0-Fa-cRw" firstAttribute="centerY" secondItem="j5p-35-7vi" secondAttribute="centerY" id="9O4-Y2-1He"/>
+                                    <constraint firstItem="usi-8n-rO4" firstAttribute="centerY" secondItem="fs0-Fa-cRw" secondAttribute="centerY" id="9ce-o3-6Ov"/>
+                                    <constraint firstItem="usi-8n-rO4" firstAttribute="centerX" secondItem="fs0-Fa-cRw" secondAttribute="centerX" id="BmY-Mh-vDV"/>
                                     <constraint firstItem="fs0-Fa-cRw" firstAttribute="centerX" secondItem="j5p-35-7vi" secondAttribute="centerX" id="Kl0-Q8-XJM"/>
                                     <constraint firstAttribute="height" secondItem="j5p-35-7vi" secondAttribute="width" multiplier="0.7" id="NiW-YF-qpo"/>
                                 </constraints>
@@ -103,6 +111,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Zi-it-H46"/>
                     <connections>
+                        <outlet property="animView" destination="usi-8n-rO4" id="kMD-fQ-ZyL"/>
                         <outlet property="routeInfoLabel" destination="fhh-F2-jBZ" id="Ote-oK-0Qw"/>
                         <outlet property="switchImageView" destination="fs0-Fa-cRw" id="arH-22-FvE"/>
                         <outlet property="topBGViewHeightCons" destination="RhE-nN-r1G" id="wFg-nf-W7L"/>
@@ -130,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMo-KJ-T0n">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMo-KJ-T0n" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
@@ -354,7 +363,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-Dj-hX9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-Dj-hX9" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
@@ -418,7 +427,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHv-CP-o9k">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHv-CP-o9k" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
@@ -464,7 +473,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbs-Kh-2q1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbs-Kh-2q1" customClass="SSHeaderView" customModule="SSFree" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="ThemeColor"/>
                                 <constraints>
@@ -644,7 +653,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vZ-hz-So3">
                                 <rect key="frame" x="354" y="802" width="40" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="PopoverColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="OKb-0U-W6a"/>
                                     <constraint firstAttribute="height" constant="40" id="fB8-M9-uB0"/>
@@ -734,6 +743,9 @@
         <image name="route" width="22" height="22"/>
         <namedColor name="Background">
             <color red="0.96078431372549022" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PopoverColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SubviewBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
