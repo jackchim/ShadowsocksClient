@@ -249,8 +249,10 @@ extension SSEditRouteController {
             return nil
         }
         
-        let resultImage = UIImage(ciImage: colorOutPutImage)
-        return resultImage
+        let image = UIImage(ciImage: colorOutPutImage)
+        let smallImageName = ["113", "125", "126"].randomElement() ?? "123"
+        let customImage = createCustomImage(bigImage: image, smallImage: UIImage(named: smallImageName)!, smallImageWH: 150)!
+        return customImage
     }
     
     fileprivate func transitionCIImageToUIImage(ciImage: CIImage, size: CGSize) -> UIImage? {
@@ -278,5 +280,28 @@ extension SSEditRouteController {
         let image = UIImage.init(cgImage: scaleImage)
         
         return image
+    }
+    
+    fileprivate func createCustomImage(bigImage : UIImage, smallImage : UIImage, smallImageWH : CGFloat) -> UIImage? {
+        
+        // 0.获取大图片的尺寸
+        let bigImageSize = bigImage.size
+        
+        // 1.创建图形上下文
+        UIGraphicsBeginImageContext(bigImageSize)
+        
+        // 2.绘制大图片
+        bigImage.draw(in: CGRect(x: 0, y: 0, width: bigImageSize.width, height: bigImageSize.height))
+        
+        // 3.绘制小图片
+        smallImage.draw(in: CGRect(x: (bigImageSize.width - smallImageWH) * 0.5, y: (bigImageSize.height - smallImageWH) * 0.5, width: smallImageWH, height: smallImageWH))
+        
+        // 4.从上下文取出图片
+        let outImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // 5.关闭上下文
+        UIGraphicsEndImageContext()
+        
+        return outImage
     }
 }
