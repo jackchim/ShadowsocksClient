@@ -204,7 +204,7 @@ class SSEditRouteController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hiddenQRCode))
         qrcodeImageContainer.addGestureRecognizer(tap)
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
             self.qrcodeImageView.superview!.frame.origin.y = 0
         }, completion: nil)
     }
