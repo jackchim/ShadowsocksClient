@@ -137,7 +137,12 @@ class ViewController: UIViewController {
     
     private func setupAnimationView() {
         let animView = AnimationView(name: "animation")
-        animView.backgroundColor = UIColor.white
+        animView.backgroundColor = UIColor.clear
+        let imageView = UIImageView(image: UIImage(named: "img_watermark"))
+        imageView.frame = UIScreen.main.bounds
+        let image = imageView.image!.addWaterMark(text: "Ladder", size: UIScreen.main.bounds.size)
+        imageView.image = image
+        animView.insertSubview(imageView, at: 0)
         animView.frame = UIScreen.main.bounds
         animView.play { (_) in
             UIView.animate(withDuration: 0.5, animations: {

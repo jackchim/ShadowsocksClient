@@ -42,6 +42,7 @@
 		2718A86923B5B6210002A156 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78723A8993000569DB9 /* Yaml.framework */; };
 		2718A86A23B5B6210002A156 /* Yaml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2711F78723A8993000569DB9 /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		271C8A1223A8BF1D008B7EAD /* SSAddRouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A1123A8BF1D008B7EAD /* SSAddRouteController.swift */; };
+		272C0FA323C6BD1F00218DE7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272C0FA223C6BD1F00218DE7 /* UIImage+Extension.swift */; };
 		2730186A235ECC9B00E00181 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27301869235ECC9B00E00181 /* TodayViewController.swift */; };
 		2730186D235ECC9B00E00181 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2730186B235ECC9B00E00181 /* MainInterface.storyboard */; };
 		27301871235ECC9B00E00181 /* Ladder.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27301865235ECC9B00E00181 /* Ladder.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -167,6 +168,7 @@
 		2711F78C23A8993100569DB9 /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Carthage/Build/iOS/MMDB.framework; sourceTree = "<group>"; };
 		2718A78123B5A9C20002A156 /* TrafficPolice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TrafficPolice.framework; path = Carthage/Build/iOS/TrafficPolice.framework; sourceTree = "<group>"; };
 		271C8A1123A8BF1D008B7EAD /* SSAddRouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSAddRouteController.swift; sourceTree = "<group>"; };
+		272C0FA223C6BD1F00218DE7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		27301865235ECC9B00E00181 /* Ladder.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Ladder.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		27301866235ECC9B00E00181 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		27301869235ECC9B00E00181 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				275E34A5235DAF3F00413056 /* SSVPNManager.swift */,
+				272C0FA223C6BD1F00218DE7 /* UIImage+Extension.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				27A8046D23A8CF7300DE6FED /* SSRouteModel.swift in Sources */,
 				279CDE5D23A8B7DF005C68EC /* SSRouteListController.swift in Sources */,
 				275884F023B2050200CE6B0F /* SSEditRouteController.swift in Sources */,
+				272C0FA323C6BD1F00218DE7 /* UIImage+Extension.swift in Sources */,
 				275E344A235DA97600413056 /* SceneDelegate.swift in Sources */,
 				27A8047023A8D08300DE6FED /* SSEncryptionTypeCell.swift in Sources */,
 				279E01B023A8C28100C7FF3C /* CustomNavigationController.swift in Sources */,
